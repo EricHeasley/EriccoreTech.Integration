@@ -17,6 +17,9 @@ namespace EriccoreTech.Integration.Service {
             services.AddSingleton<IIntegrationComponent, UppercaseComponent>();
             services.AddSingleton<IIntegrationComponent, ContentFilterComponent>();
             services.AddSingleton<IIntegrationComponent, ContentBasedRouterComponent>();
+            services.AddHttpClient(HttpRequestComponent.ClientName)
+                .ConfigurePrimaryHttpMessageHandler(() => new SocketsHttpHandler { AllowAutoRedirect = false });
+            services.AddSingleton<IIntegrationComponent, HttpRequestComponent>();
             services.AddSingleton<ExecutionScheduler>();
             services.AddSingleton<ProcessManager>();
             services.AddSingleton<ControlBus>();

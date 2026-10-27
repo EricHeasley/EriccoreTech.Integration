@@ -1,0 +1,14 @@
+name: dotnet-ci
+on: [push, pull_request]
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - run: dotnet restore EriccoreTech.Integration.slnx
+      - run: dotnet build EriccoreTech.Integration.slnx --no-restore --configuration Release
+      - name: Tests
+        run: dotnet test EriccoreTech.Integration.slnx --no-build --configuration Release
