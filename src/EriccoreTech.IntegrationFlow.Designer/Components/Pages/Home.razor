@@ -1,0 +1,50 @@
+@page "/"
+@using Microsoft.EntityFrameworkCore
+@using EriccoreTech.IntegrationFlow.Persistence
+@inject IDbContextFactory<IntegrationDbContext> Factory
+
+<PageTitle>IntegrationFlow | Dashboard</PageTitle>
+<h1>IntegrationFlow</h1>
+<p>Execution history and message processing dashboard</p>
+<button @onclick="Refresh">Refresh</button>
+
+@if (_error is not null) {
+    <p class="error">@_error</p>
+}
+
+<table>
+    <thead>
+        <tr><th>Execution</th><th>Workflow</th><th>Status</th><th>Started</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var execution in _executions) {
+            <tr>
+                <td>@execution.Id</td>
+                <td>@execution.WorkflowId</td>
+                <td>@execution.Status</td>
+                <td>@execution.CreatedAt</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+
+    private List<ExecutionRecord> _executions = [];
+    private string? _error;
+
+    protected override async Task OnInitializedAsync() {
+        await Refresh();
+    }
+
+    private async Task Refresh() {
+        try {
+            await using var db = await Factory.CreateDbContextAsync();
+            _executions = await db.Executions.AsNoTracking().OrderByDescending(x => x.CreatedAt).Take(100).ToListAsync();
+            _error = null;
+        } catch (Exception ex) {
+            _error = ex.Message;
+        }
+    }
+
+}

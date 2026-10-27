@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Core/EriccoreTech.IntegrationFlow.Core.csproj" />
+  </ItemGroup>
+
+</Project>

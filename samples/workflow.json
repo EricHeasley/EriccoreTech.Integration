@@ -1,0 +1,8 @@
+{
+  "id": "hello-world",
+  "steps": [
+    { "id": "echo", "component": "echo" },
+    { "id": "upper", "component": "uppercase", "dependsOn": ["echo"] },
+    { "id": "route", "component": "route.priority", "dependsOn": ["echo"] }
+  ]
+}

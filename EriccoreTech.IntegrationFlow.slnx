@@ -1,0 +1,18 @@
+<Solution>
+  <Project Path="src/EriccoreTech.IntegrationFlow.Api/EriccoreTech.IntegrationFlow.Api.csproj" />
+  <Project Path="src/EriccoreTech.IntegrationFlow.Contracts/EriccoreTech.IntegrationFlow.Contracts.csproj" />
+  <Project Path="src/EriccoreTech.IntegrationFlow.Core/EriccoreTech.IntegrationFlow.Core.csproj" />
+  <Project Path="src/EriccoreTech.IntegrationFlow.Designer/EriccoreTech.IntegrationFlow.Designer.csproj" />
+  <Project Path="src/EriccoreTech.IntegrationFlow.Management/EriccoreTech.IntegrationFlow.Management.csproj" />
+  <Project Path="src/EriccoreTech.IntegrationFlow.Messaging/EriccoreTech.IntegrationFlow.Messaging.csproj" />
+  <Project Path="src/EriccoreTech.IntegrationFlow.Orchestration/EriccoreTech.IntegrationFlow.Orchestration.csproj" />
+  <Project Path="src/EriccoreTech.IntegrationFlow.Persistence/EriccoreTech.IntegrationFlow.Persistence.csproj" />
+  <Project Path="src/EriccoreTech.IntegrationFlow.Processing/EriccoreTech.IntegrationFlow.Processing.csproj" />
+  <Project Path="src/EriccoreTech.IntegrationFlow.Reliability/EriccoreTech.IntegrationFlow.Reliability.csproj" />
+  <Project Path="src/EriccoreTech.IntegrationFlow.Routing/EriccoreTech.IntegrationFlow.Routing.csproj" />
+  <Project Path="src/EriccoreTech.IntegrationFlow.Service/EriccoreTech.IntegrationFlow.Service.csproj" />
+  <Project Path="src/EriccoreTech.IntegrationFlow.Transformation/EriccoreTech.IntegrationFlow.Transformation.csproj" />
+  <Project Path="src/EriccoreTech.IntegrationFlow.Transport/EriccoreTech.IntegrationFlow.Transport.csproj" />
+  <Project Path="src/EriccoreTech.IntegrationFlow.Worker/EriccoreTech.IntegrationFlow.Worker.csproj" />
+  <Project Path="tests/EriccoreTech.IntegrationFlow.Tests/EriccoreTech.IntegrationFlow.Tests.csproj" />
+</Solution>
