@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="../EriccoreTech.Integration.Core/EriccoreTech.Integration.Core.csproj" />
+    <ProjectReference Include="../EriccoreTech.Integration.Persistence/EriccoreTech.Integration.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -33,16 +33,16 @@ Each project uses one namespace (its project name); the folders inside are organ
 Requires **.NET 10 SDK**, SQL Server, and NuGet access. Builds with zero warnings and the unit tests pass (xunit, EF Core InMemory). The RabbitMQ and Azure Service Bus transports compile but have not been exercised against a live broker, and nothing has been run against SQL Server.
 
 ```bash
-dotnet restore EriccoreTech.IntegrationFlow.slnx
-dotnet build EriccoreTech.IntegrationFlow.slnx
-dotnet test EriccoreTech.IntegrationFlow.slnx
+dotnet restore EriccoreTech.Integration.slnx
+dotnet build EriccoreTech.Integration.slnx
+dotnet test EriccoreTech.Integration.slnx
 # create the database schema (EF CLI required)
 dotnet tool install --global dotnet-ef --version 10.0.0
-dotnet ef migrations add Initial --project src/EriccoreTech.IntegrationFlow.Persistence --startup-project src/EriccoreTech.IntegrationFlow.Api
-dotnet ef database update --project src/EriccoreTech.IntegrationFlow.Persistence --startup-project src/EriccoreTech.IntegrationFlow.Api
-dotnet run --project src/EriccoreTech.IntegrationFlow.Api
-dotnet run --project src/EriccoreTech.IntegrationFlow.Worker
-dotnet run --project src/EriccoreTech.IntegrationFlow.Designer
+dotnet ef migrations add Initial --project src/EriccoreTech.Integration.Persistence --startup-project src/EriccoreTech.Integration.Api
+dotnet ef database update --project src/EriccoreTech.Integration.Persistence --startup-project src/EriccoreTech.Integration.Api
+dotnet run --project src/EriccoreTech.Integration.Api
+dotnet run --project src/EriccoreTech.Integration.Worker
+dotnet run --project src/EriccoreTech.Integration.Designer
 ```
 
 ## API

@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <ItemGroup>
+    <ProjectReference Include="../EriccoreTech.Integration.Persistence/EriccoreTech.Integration.Persistence.csproj" />
+    <ProjectReference Include="../EriccoreTech.Integration.Reliability/EriccoreTech.Integration.Reliability.csproj" />
+    <ProjectReference Include="../EriccoreTech.Integration.Transport/EriccoreTech.Integration.Transport.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.14" />
+  </ItemGroup>
+
+</Project>
