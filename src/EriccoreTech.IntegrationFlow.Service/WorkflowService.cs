@@ -1,13 +1,13 @@
-using EriccoreTech.IntegrationFlow.Engine;
-using EriccoreTech.IntegrationFlow.Model;
-using EriccoreTech.IntegrationFlow.Service.Contracts;
+using EriccoreTech.IntegrationFlow.Orchestration;
+using EriccoreTech.IntegrationFlow.Core;
+using EriccoreTech.IntegrationFlow.Contracts;
 
 namespace EriccoreTech.IntegrationFlow.Service {
     public sealed class WorkflowService : IWorkflowService {
 
-        private readonly WorkflowEngine _engine;
+        private readonly ExecutionScheduler _engine;
 
-        public WorkflowService(WorkflowEngine engine) {
+        public WorkflowService(ExecutionScheduler engine) {
             _engine = engine;
         }
 

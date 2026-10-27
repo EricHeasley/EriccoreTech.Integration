@@ -1,7 +1,7 @@
 using System.Text.Json;
-using EriccoreTech.IntegrationFlow.Engine;
+using EriccoreTech.IntegrationFlow.Orchestration;
 using EriccoreTech.IntegrationFlow.Management;
-using EriccoreTech.IntegrationFlow.Patterns;
+using EriccoreTech.IntegrationFlow.Processing;
 using Xunit;
 
 namespace EriccoreTech.IntegrationFlow.Tests {

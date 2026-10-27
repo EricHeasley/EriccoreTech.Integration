@@ -1,6 +1,6 @@
-using EriccoreTech.IntegrationFlow.Model;
+using EriccoreTech.IntegrationFlow.Core;
 using EriccoreTech.IntegrationFlow.Persistence;
-using EriccoreTech.IntegrationFlow.Service.Contracts;
+using EriccoreTech.IntegrationFlow.Contracts;
 using Microsoft.EntityFrameworkCore;
 
 namespace EriccoreTech.IntegrationFlow.Service {

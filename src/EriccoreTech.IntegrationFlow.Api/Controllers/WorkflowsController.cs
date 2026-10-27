@@ -1,8 +1,8 @@
-using EriccoreTech.IntegrationFlow.Model;
-using EriccoreTech.IntegrationFlow.Service.Contracts;
+using EriccoreTech.IntegrationFlow.Core;
+using EriccoreTech.IntegrationFlow.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EriccoreTech.IntegrationFlow.Api.Controllers {
+namespace EriccoreTech.IntegrationFlow.Api {
     [ApiController]
     [Route("[controller]")]
     public class WorkflowsController : ControllerBase {

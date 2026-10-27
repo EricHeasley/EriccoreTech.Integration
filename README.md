@@ -11,15 +11,26 @@
 6. Management: control bus pause/resume state, health endpoint, execution history endpoint.
 7. Blazor: interactive server dashboard displaying recent SQL execution records.
 
-## Solution layering
-- `Model` — POCOs and DTOs only (envelope, workflow definitions, request/response pairs). No references.
-- `Service.Contracts` — interfaces only (`IWorkflowService`, `IMessagingService`, `IManagementService`, `IExecutionHistoryService`, `IComponentCatalogService`, `IIntegrationComponent`). References `Model`.
-- `Service` — implementations over the engine, messaging, management and persistence projects, plus `AddIntegrationFlowServices`.
-- `Api` — thin controllers that take the service interfaces; wiring in `Program.cs`.
-- `Engine`, `Messaging`, `Patterns`, `Persistence`, `Transport`, `Management`, `Worker`, `Designer` — infrastructure and hosts beneath those layers.
+## Solution layout
+Each project uses one namespace (its project name); the folders inside are organisational.
+
+| Project | Contents |
+|---|---|
+| `Core` | Plain data: envelope, workflow/step definitions and results, request/response DTOs. No references. |
+| `Contracts` | Interfaces only: `IIntegrationComponent`, `IMessagePublisher`/`IMessageConsumer`/`IMessageTransport`, the `I*Service` contracts. |
+| `Messaging` | Channels, envelope helpers/serializer, publishers, consumers, subscriptions, delivery policy. |
+| `Routing` | ContentBased, Dynamic, RecipientList, RoutingSlip. |
+| `Transformation` | Translators, Normalizers, Enrichers, CanonicalModels. |
+| `Processing` | Splitter, Aggregator, Resequencer, ScatterGather. |
+| `Orchestration` | WorkflowCompiler, ExecutionScheduler, ProcessManager, StateMachine. |
+| `Reliability` | Retry, Idempotency, DeadLetter, Outbox (+ relay), Inbox. |
+| `Transport` | InMemory, SqlServer queue, RabbitMQ, AzureServiceBus. |
+| `Management` | ControlBus, MessageHistory, MessageStore, Diagnostics. |
+| `Persistence`, `Service` | Supporting layers outside the diagram: EF Core model/stores, and the service implementations the API calls. |
+| `Api`, `Worker`, `Designer` | Hosts. `Api` has thin controllers over the `I*Service` contracts. |
 
 ## Build
-Requires **.NET 10 SDK**, SQL Server, and NuGet access. Not compiled/tested in this environment (SDK unavailable).
+Requires **.NET 10 SDK**, SQL Server, and NuGet access. Builds with zero warnings and the unit tests pass (xunit, EF Core InMemory). The RabbitMQ and Azure Service Bus transports compile but have not been exercised against a live broker, and nothing has been run against SQL Server.
 
 ```bash
 dotnet restore EriccoreTech.IntegrationFlow.slnx

@@ -1,6 +1,6 @@
 using EriccoreTech.IntegrationFlow.Management;
-using EriccoreTech.IntegrationFlow.Model;
-using EriccoreTech.IntegrationFlow.Service.Contracts;
+using EriccoreTech.IntegrationFlow.Core;
+using EriccoreTech.IntegrationFlow.Contracts;
 
 namespace EriccoreTech.IntegrationFlow.Service {
     public sealed class ManagementService : IManagementService {

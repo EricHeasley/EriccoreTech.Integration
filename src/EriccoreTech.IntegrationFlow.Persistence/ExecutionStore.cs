@@ -1,5 +1,5 @@
 using System.Text.Json;
-using EriccoreTech.IntegrationFlow.Model;
+using EriccoreTech.IntegrationFlow.Core;
 using Microsoft.EntityFrameworkCore;
 
 namespace EriccoreTech.IntegrationFlow.Persistence {

@@ -1,7 +1,8 @@
 using System.Text.Json;
-using EriccoreTech.IntegrationFlow.Model;
-using EriccoreTech.IntegrationFlow.Engine;
-using EriccoreTech.IntegrationFlow.Patterns;
+using EriccoreTech.IntegrationFlow.Core;
+using EriccoreTech.IntegrationFlow.Orchestration;
+using EriccoreTech.IntegrationFlow.Routing;
+using EriccoreTech.IntegrationFlow.Transformation;
 using Xunit;
 
 namespace EriccoreTech.IntegrationFlow.Tests {
@@ -22,7 +23,7 @@ namespace EriccoreTech.IntegrationFlow.Tests {
 
         [Fact]
         public async Task RunsDependentSteps() {
-            var engine = new WorkflowEngine([new EchoComponent(), new UppercaseComponent()]);
+            var engine = new ExecutionScheduler([new EchoComponent(), new UppercaseComponent()]);
             var workflow = new WorkflowDefinition("demo", [
                 new("a", "echo"), new("b", "uppercase", ["a"])]);
             var result = await engine.ExecuteAsync(workflow,

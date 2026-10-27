@@ -1,9 +1,9 @@
 using System.Text.Json;
-using EriccoreTech.IntegrationFlow.Engine;
+using EriccoreTech.IntegrationFlow.Orchestration;
 using EriccoreTech.IntegrationFlow.Management;
-using EriccoreTech.IntegrationFlow.Messaging;
-using EriccoreTech.IntegrationFlow.Model;
-using EriccoreTech.IntegrationFlow.Patterns;
+using EriccoreTech.IntegrationFlow.Core;
+using EriccoreTech.IntegrationFlow.Transformation;
+using EriccoreTech.IntegrationFlow.Transport;
 using EriccoreTech.IntegrationFlow.Service;
 using Xunit;
 
@@ -12,7 +12,7 @@ namespace EriccoreTech.IntegrationFlow.Tests {
 
         [Fact]
         public async Task WorkflowServiceExecutesDefinition() {
-            var service = new WorkflowService(new WorkflowEngine([new EchoComponent(), new UppercaseComponent()]));
+            var service = new WorkflowService(new ExecutionScheduler([new EchoComponent(), new UppercaseComponent()]));
             var definition = new WorkflowDefinition("demo", [new("a", "echo"), new("b", "uppercase", ["a"])]);
 
             var response = await service.ExecuteWorkflowAsync(new ExecuteWorkflowRequest(
@@ -23,7 +23,7 @@ namespace EriccoreTech.IntegrationFlow.Tests {
 
         [Fact]
         public async Task WorkflowServiceRejectsNullRequest() {
-            var service = new WorkflowService(new WorkflowEngine([]));
+            var service = new WorkflowService(new ExecutionScheduler([]));
             await Assert.ThrowsAsync<ArgumentNullException>(() => service.ExecuteWorkflowAsync(null!));
         }
 
@@ -46,7 +46,7 @@ namespace EriccoreTech.IntegrationFlow.Tests {
 
         [Fact]
         public async Task MessagingServiceReturnsEnvelopeIdentifiers() {
-            var service = new MessagingService(new InMemoryMessageBus());
+            var service = new MessagingService(new InMemoryTransport());
             var payload = JsonSerializer.SerializeToElement(new { text = "hi" });
 
             var response = await service.PublishMessageAsync(new PublishMessageRequest("jobs", payload));

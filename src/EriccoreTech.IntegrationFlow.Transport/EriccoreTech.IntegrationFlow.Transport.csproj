@@ -1,8 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Core/EriccoreTech.IntegrationFlow.Core.csproj" />
+    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Contracts/EriccoreTech.IntegrationFlow.Contracts.csproj" />
+    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Messaging/EriccoreTech.IntegrationFlow.Messaging.csproj" />
     <ProjectReference Include="../EriccoreTech.IntegrationFlow.Persistence/EriccoreTech.IntegrationFlow.Persistence.csproj" />
-    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Model/EriccoreTech.IntegrationFlow.Model.csproj" />
+    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Reliability/EriccoreTech.IntegrationFlow.Reliability.csproj" />
+    <PackageReference Include="RabbitMQ.Client" Version="7.2.2" />
+    <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.21.0" />
   </ItemGroup>
 
 </Project>

@@ -18,6 +18,8 @@ namespace EriccoreTech.IntegrationFlow.Persistence {
 
         public DbSet<WorkflowRecord> Workflows => Set<WorkflowRecord>();
 
+        public DbSet<MessageRecord> Messages => Set<MessageRecord>();
+
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             modelBuilder.Entity<ExecutionRecord>().HasKey(x => x.Id);
             modelBuilder.Entity<StepRecord>().HasKey(x => new { x.ExecutionId, x.StepId });
@@ -26,6 +28,8 @@ namespace EriccoreTech.IntegrationFlow.Persistence {
             modelBuilder.Entity<QueueRecord>().HasKey(x => x.Id);
             modelBuilder.Entity<QueueRecord>().HasIndex(x => new { x.Topic, x.AvailableAt });
             modelBuilder.Entity<WorkflowRecord>().HasKey(x => new { x.Id, x.Version });
+            modelBuilder.Entity<MessageRecord>().HasKey(x => x.Id);
+            modelBuilder.Entity<MessageRecord>().HasIndex(x => x.CorrelationId);
         }
 
     }

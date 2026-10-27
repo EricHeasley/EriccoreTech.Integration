@@ -1,9 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <ItemGroup>
-    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Model/EriccoreTech.IntegrationFlow.Model.csproj" />
-    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Service.Contracts/EriccoreTech.IntegrationFlow.Service.Contracts.csproj" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0" />
-  </ItemGroup>
-
-</Project>

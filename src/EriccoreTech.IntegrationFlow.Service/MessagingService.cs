@@ -1,14 +1,13 @@
-using EriccoreTech.IntegrationFlow.Messaging;
-using EriccoreTech.IntegrationFlow.Model;
-using EriccoreTech.IntegrationFlow.Service.Contracts;
+using EriccoreTech.IntegrationFlow.Contracts;
+using EriccoreTech.IntegrationFlow.Core;
 
 namespace EriccoreTech.IntegrationFlow.Service {
     public sealed class MessagingService : IMessagingService {
 
-        private readonly InMemoryMessageBus _bus;
+        private readonly IMessagePublisher _publisher;
 
-        public MessagingService(InMemoryMessageBus bus) {
-            _bus = bus;
+        public MessagingService(IMessagePublisher publisher) {
+            _publisher = publisher;
         }
 
         public async Task<PublishMessageResponse> PublishMessageAsync(PublishMessageRequest request, CancellationToken cancellationToken = default) {
@@ -17,7 +16,7 @@ namespace EriccoreTech.IntegrationFlow.Service {
             }
 
             var envelope = MessageEnvelope<object>.Create(request.Topic, request.Payload.Clone());
-            await _bus.PublishAsync(request.Topic, envelope, cancellationToken);
+            await _publisher.PublishAsync(request.Topic, envelope, cancellationToken);
             return new PublishMessageResponse(envelope.MessageId, envelope.CorrelationId);
         }
 
