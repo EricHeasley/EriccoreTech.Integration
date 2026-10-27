@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.14" />
+    <ProjectReference Include="../EriccoreTech.Integration.Core/EriccoreTech.Integration.Core.csproj" />
+    <ProjectReference Include="../EriccoreTech.Integration.Contracts/EriccoreTech.Integration.Contracts.csproj" />
+    <ProjectReference Include="../EriccoreTech.Integration.Service/EriccoreTech.Integration.Service.csproj" />
+    <ProjectReference Include="../EriccoreTech.Integration.Persistence/EriccoreTech.Integration.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

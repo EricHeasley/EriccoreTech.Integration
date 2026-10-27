@@ -1,8 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
-
-  <ItemGroup>
-    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Persistence/EriccoreTech.IntegrationFlow.Persistence.csproj" />
-    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Management/EriccoreTech.IntegrationFlow.Management.csproj" />
-  </ItemGroup>
-
-</Project>

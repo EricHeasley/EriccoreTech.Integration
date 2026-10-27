@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="../EriccoreTech.Integration.Core/EriccoreTech.Integration.Core.csproj" />
+    <ProjectReference Include="../EriccoreTech.Integration.Contracts/EriccoreTech.Integration.Contracts.csproj" />
+    <ProjectReference Include="../EriccoreTech.Integration.Orchestration/EriccoreTech.Integration.Orchestration.csproj" />
+    <ProjectReference Include="../EriccoreTech.Integration.Messaging/EriccoreTech.Integration.Messaging.csproj" />
+    <ProjectReference Include="../EriccoreTech.Integration.Transport/EriccoreTech.Integration.Transport.csproj" />
+    <ProjectReference Include="../EriccoreTech.Integration.Routing/EriccoreTech.Integration.Routing.csproj" />
+    <ProjectReference Include="../EriccoreTech.Integration.Transformation/EriccoreTech.Integration.Transformation.csproj" />
+    <ProjectReference Include="../EriccoreTech.Integration.Processing/EriccoreTech.Integration.Processing.csproj" />
+    <ProjectReference Include="../EriccoreTech.Integration.Persistence/EriccoreTech.Integration.Persistence.csproj" />
+    <ProjectReference Include="../EriccoreTech.Integration.Management/EriccoreTech.Integration.Management.csproj" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.14" />
+  </ItemGroup>
+
+</Project>
