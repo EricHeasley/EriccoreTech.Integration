@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Persistence/EriccoreTech.IntegrationFlow.Persistence.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="10.0.0" />
+  </ItemGroup>
+
+</Project>

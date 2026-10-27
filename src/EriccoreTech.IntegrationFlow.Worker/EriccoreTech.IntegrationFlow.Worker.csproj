@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <ItemGroup>
+    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Persistence/EriccoreTech.IntegrationFlow.Persistence.csproj" />
+    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Transport/EriccoreTech.IntegrationFlow.Transport.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.0" />
+  </ItemGroup>
+
+</Project>
