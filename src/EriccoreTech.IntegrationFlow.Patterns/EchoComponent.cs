@@ -1,4 +1,5 @@
-using EriccoreTech.IntegrationFlow.Core;
+using EriccoreTech.IntegrationFlow.Model;
+using EriccoreTech.IntegrationFlow.Service.Contracts;
 
 namespace EriccoreTech.IntegrationFlow.Patterns {
     public sealed class EchoComponent : IIntegrationComponent {

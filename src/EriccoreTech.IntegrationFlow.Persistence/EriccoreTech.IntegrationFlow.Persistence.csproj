@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Core/EriccoreTech.IntegrationFlow.Core.csproj" />
+    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Model/EriccoreTech.IntegrationFlow.Model.csproj" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.0">
       <PrivateAssets>all</PrivateAssets>

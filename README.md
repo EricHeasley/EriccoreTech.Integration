@@ -11,6 +11,13 @@
 6. Management: control bus pause/resume state, health endpoint, execution history endpoint.
 7. Blazor: interactive server dashboard displaying recent SQL execution records.
 
+## Solution layering
+- `Model` — POCOs and DTOs only (envelope, workflow definitions, request/response pairs). No references.
+- `Service.Contracts` — interfaces only (`IWorkflowService`, `IMessagingService`, `IManagementService`, `IExecutionHistoryService`, `IComponentCatalogService`, `IIntegrationComponent`). References `Model`.
+- `Service` — implementations over the engine, messaging, management and persistence projects, plus `AddIntegrationFlowServices`.
+- `Api` — thin controllers that take the service interfaces; wiring in `Program.cs`.
+- `Engine`, `Messaging`, `Patterns`, `Persistence`, `Transport`, `Management`, `Worker`, `Designer` — infrastructure and hosts beneath those layers.
+
 ## Build
 Requires **.NET 10 SDK**, SQL Server, and NuGet access. Not compiled/tested in this environment (SDK unavailable).
 

@@ -1,4 +1,4 @@
-using EriccoreTech.IntegrationFlow.Core;
+using EriccoreTech.IntegrationFlow.Model;
 
 namespace EriccoreTech.IntegrationFlow.Engine {
     public static class WorkflowCompiler {

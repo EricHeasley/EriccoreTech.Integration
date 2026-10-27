@@ -1,4 +1,6 @@
-namespace EriccoreTech.IntegrationFlow.Core {
+using EriccoreTech.IntegrationFlow.Model;
+
+namespace EriccoreTech.IntegrationFlow.Service.Contracts {
     public interface IIntegrationComponent {
 
         string Type { get; }

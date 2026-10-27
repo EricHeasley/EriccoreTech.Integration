@@ -1,5 +1,5 @@
 using System.Text.Json;
-using EriccoreTech.IntegrationFlow.Core;
+using EriccoreTech.IntegrationFlow.Model;
 using EriccoreTech.IntegrationFlow.Engine;
 using EriccoreTech.IntegrationFlow.Patterns;
 using Xunit;

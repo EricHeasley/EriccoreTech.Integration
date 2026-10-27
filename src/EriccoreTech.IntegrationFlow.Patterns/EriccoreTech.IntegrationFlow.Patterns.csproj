@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Core/EriccoreTech.IntegrationFlow.Core.csproj" />
+    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Model/EriccoreTech.IntegrationFlow.Model.csproj" />
+    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Service.Contracts/EriccoreTech.IntegrationFlow.Service.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,12 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <ItemGroup>
-    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Core/EriccoreTech.IntegrationFlow.Core.csproj" />
-    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Engine/EriccoreTech.IntegrationFlow.Engine.csproj" />
-    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Messaging/EriccoreTech.IntegrationFlow.Messaging.csproj" />
-    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Patterns/EriccoreTech.IntegrationFlow.Patterns.csproj" />
+    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Model/EriccoreTech.IntegrationFlow.Model.csproj" />
+    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Service.Contracts/EriccoreTech.IntegrationFlow.Service.Contracts.csproj" />
+    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Service/EriccoreTech.IntegrationFlow.Service.csproj" />
     <ProjectReference Include="../EriccoreTech.IntegrationFlow.Persistence/EriccoreTech.IntegrationFlow.Persistence.csproj" />
-    <ProjectReference Include="../EriccoreTech.IntegrationFlow.Management/EriccoreTech.IntegrationFlow.Management.csproj" />
   </ItemGroup>
 
 </Project>

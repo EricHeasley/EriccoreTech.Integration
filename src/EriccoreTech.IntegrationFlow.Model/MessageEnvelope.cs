@@ -1,4 +1,4 @@
-namespace EriccoreTech.IntegrationFlow.Core {
+namespace EriccoreTech.IntegrationFlow.Model {
     public sealed record MessageEnvelope<T>(
         Guid MessageId, Guid CorrelationId, Guid? CausationId,
         string MessageType, int SchemaVersion, DateTimeOffset CreatedAt,

@@ -1,7 +1,7 @@
 using System.Collections.Concurrent;
 using System.Runtime.CompilerServices;
 using System.Threading.Channels;
-using EriccoreTech.IntegrationFlow.Core;
+using EriccoreTech.IntegrationFlow.Model;
 
 namespace EriccoreTech.IntegrationFlow.Messaging {
 

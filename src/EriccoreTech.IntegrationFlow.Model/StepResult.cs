@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace EriccoreTech.IntegrationFlow.Core {
+namespace EriccoreTech.IntegrationFlow.Model {
     public sealed record StepResult(bool Success, JsonElement? Output, string? Error = null) {
 
         public static StepResult Ok(JsonElement output) {

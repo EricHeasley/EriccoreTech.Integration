@@ -11,6 +11,9 @@
     <ProjectReference Include="../../src/EriccoreTech.IntegrationFlow.Engine/EriccoreTech.IntegrationFlow.Engine.csproj" />
     <ProjectReference Include="../../src/EriccoreTech.IntegrationFlow.Patterns/EriccoreTech.IntegrationFlow.Patterns.csproj" />
     <ProjectReference Include="../../src/EriccoreTech.IntegrationFlow.Management/EriccoreTech.IntegrationFlow.Management.csproj" />
+    <ProjectReference Include="../../src/EriccoreTech.IntegrationFlow.Messaging/EriccoreTech.IntegrationFlow.Messaging.csproj" />
+    <ProjectReference Include="../../src/EriccoreTech.IntegrationFlow.Service/EriccoreTech.IntegrationFlow.Service.csproj" />
+    <ProjectReference Include="../../src/EriccoreTech.IntegrationFlow.Service.Contracts/EriccoreTech.IntegrationFlow.Service.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
